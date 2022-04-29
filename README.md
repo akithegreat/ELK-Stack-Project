@@ -83,3 +83,55 @@ A summary of the access policies in place can be found in the table below.
 | Web-1      | NO                   | 10.0.0.4             |
 | Web-2      | NO                   | 10.0.0.4             |
 | Web-3      | NO                   | 10.0.0.4             |
+
+
+### Elk Configuration
+
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because it allows changes to be made within any of the VMs associated with it. It quickly deploys and minimizes the probable for errors.
+
+The playbook implements the following tasks:
+1) Install Docker.io
+2) Install python3-pip
+3) Install Docker Python Module
+4) Increases the use of virtual memory
+5) Download and launch a docker web container 
+
+
+### Target Machines & Beats
+This ELK server is configured to monitor the following machines:
+
+Web-1 10.0.0.5
+Web-2 10.0.0.6
+We have installed the following Beats on these machines:
+-Filebeats
+-Metricbeats
+
+These Beats allow us to collect the following information from each machine:
+-Filebeats collects data such as user log ins on each machine and sends them to logstash and elastic beats.
+-Metricbeats- Collects the data from the VMs to determine if they have enough size and memory to run correctly.  
+
+
+### Using the Playbook
+In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
+
+SSH into the control node and follow the steps below:
+- Copy the configuration files to the /etc/ansible/files directory.
+- Update the host file to include the private IP addresss of the webservers and elk server.
+- Run the playbook and navigate to Kibana to check that the installation worked as expected.
+
+*Which file is the playbook? Where do you copy it?*
+
+There are three playbook files
+- Elk Playbook
+- Filebeat Playbook
+- Metricbeat Playbook
+
+These files are copied to /etc/ansible
+
+*Which file do you update to make Ansible run the playbook on a specific machine?*
+
+- /etc/ansible/hosts
+
+*Which URL do you navigate to in order to check that the ELK server is running?*
+
+- http://[your.VM.IP]:5601/app/kibana
