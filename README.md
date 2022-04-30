@@ -126,8 +126,8 @@ These files are copied to /etc/ansible
 
 *Which file do you update to make Ansible run the playbook on a specific machine?*
 
-- /etc/ansible/hosts
+- Elk-playbook.yml file which is located in /etc/ansible/hosts
 
 *Which URL do you navigate to in order to check that the ELK server is running?*
 
-- http://[your.VM.IP]:5601/app/kibana
+- http://[ELK-VM.IP]:5601/app/kibana
