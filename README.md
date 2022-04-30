@@ -128,6 +128,21 @@ These files are copied to /etc/ansible
 
 - You will need to update the **hosts** file in the **/etc/ansible/** folder, adding the IP's of the Virtual Machines
 - Another way is to update the Elk-playbook.yml file which is located in /etc/ansible/hosts
+ 
+### How do I specify which machine to install the ELK server on versus which to install Filebeat on?
+>```yaml
+>[webservers]
+>#alpha.example.org
+>#beta.example.org
+>#192.168.1.100
+>#192.168.1.110
+>10.0.0.5 ansible_python_interpreter=/usr/bin/python3
+>10.0.0.6 ansible_python_interpreter=/usr/bin/python3
+>
+>[elk]
+>10.1.0.4 ansible_python_interpreter=/usr/bin/python3
+>```
+
 
 ### Which URL do you navigate to in order to check that the ELK server is running?
 - http://[ELK-VM.IP]:5601/app/kibana
