@@ -124,9 +124,12 @@ There are three playbook files
 
 These files are copied to /etc/ansible
 
-*Which file do you update to make Ansible run the playbook on a specific machine?*
 
-- Elk-playbook.yml file which is located in /etc/ansible/hosts
+
+### Which file do you update to make Ansible run the playbook on a specific machine?
+
+- You will need to update the **hosts** file in the **/etc/ansible/** folder, adding the IP's of the Virtual Machines
+- Another way is to update the Elk-playbook.yml file which is located in /etc/ansible/hosts
 
 *Which URL do you navigate to in order to check that the ELK server is running?*
 
