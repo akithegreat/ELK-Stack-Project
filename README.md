@@ -99,17 +99,13 @@ The playbook implements the following tasks:
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
+- Web-1 10.0.0.5
+- Web-2 10.0.0.6
 
-Web-1 10.0.0.5
-Web-2 10.0.0.6
-We have installed the following Beats on these machines:
--Filebeats
--Metricbeats
 
-These Beats allow us to collect the following information from each machine:
--Filebeats collects data such as user log ins on each machine and sends them to logstash and elastic beats.
--Metricbeats- Collects the data from the VMs to determine if they have enough size and memory to run correctly.  
-
+I have installed the following Beats on these machines and these beats allow us to collect the following information from each machine :
+- FILEBEATS collects data such as user log ins on each machine and sends them to logstash and elastic beats.
+- METRICBEATS collects the data from the VMs to determine if they have enough size and memory to run correctly.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
